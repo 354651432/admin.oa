@@ -13,4 +13,4 @@
 - 如果需要邮件服务: `docker-compose exec -T fpm php /web/artisan queue:work`
 
 从 http://localhost:2000 访问
-可能会遇到权限问题，添加 storage, public/upload 两个目录读权限，即可解决
+可能会遇到权限问题，添加 storage, public/upload 两个目录读写权限，即可解决
