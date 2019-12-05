@@ -17,7 +17,8 @@ services:
     ports:
       - 2000:80
   mysql:
-    image: mysql
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: admin_oa
