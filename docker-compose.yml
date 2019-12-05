@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  fpm:
+    image: fezzz/php-fpm
+    restart: always
+    privileged: true
+    volumes:
+      - .:/web
+  nginx:
+    image: nginx
+    restart: always
+    volumes:
+      - ./:/web
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 2000:80
